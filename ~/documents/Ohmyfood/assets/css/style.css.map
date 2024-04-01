@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAQA,CAAE;EACA,WAAW,EAAE,oBAAoB;EACjC,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;;AAGZ,yBAAyB;EAGrB,SAAE;IACA,WAAW,EAZV,6BAA6B;IAa9B,SAAS,EAAE,IAAI;EAEjB,UAAG;IACD,gBAAgB,EAjBf,OAAO",
+"sources": ["../../../../../../../documents/Ohmyfood/sass/styles.scss"],
+"names": [],
+"file": "style.css"
+}
