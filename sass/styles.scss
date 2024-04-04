@@ -1,10 +1,16 @@
-$button-gradient: linear-gradient(to right, #9356dc, #ff79da);
+$button-gradient: linear-gradient(350deg, #9356dc, #ff79da);
 $green-font: #008766;
 $tick: #99e2d0;
 $filter: #9356dc;
 $footer: #353535;
 $card: #f6f6f6;
+$second-gray: #eaeaea;
 $logo: "Shrikhand", sans-serif;
+$logo-size: 30px;
+$title-size: 24px;
+$second-title-size: 18px;
+$text-size: 16px;
+$new-size: 14px;
 
 * {
   font-family: "Roboto", sans-serif;
@@ -12,20 +18,465 @@ $logo: "Shrikhand", sans-serif;
   padding: 0;
 }
 
-@media (max-width: 768px){
+body {
+  display: flex;
+  justify-content: center;
+}
 
-  header {
-    h1{
-      font-family: $logo;
-      font-size: 30px;
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $logo;
+    font-size: 35px;
+    height: 96px;
+  }
+
+  nav {
+    background-color: $second-gray;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+  }
+
+  .position {
+    display: flex;
+    align-items: center;
+    font-size: $text-size;
+    color: black;
+    margin-left: 60px;
+  }
+
+  input {
+    border: none;
+    background-color: $second-gray;
+    font-size: $text-size;
+    padding-left: 20px;
+    &:focus {
+      outline: none;
     }
-    nav{
-      background-color: $card;
+  }
+}
+.explorer {
+  background-color: $card;
+  padding-top: 30px;
+  text-align: center;
+
+  h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  &__text {
+    display: flex;
+    justify-content: center;
+    font-size: $second-title-size;
+    font-weight: lighter;
+    padding: 30px 0 35px;
+  }
+  button {
+    font-size: $text-size;
+    border-radius: 25px;
+    border: none;
+    background: $button-gradient;
+    color: white;
+    padding: 15px 23px;
+    margin-bottom: 30px;
+  }
+}
+.operation {
+  height: 180px;
+  padding: 45px 180px 0;
+
+  h1 {
+    padding-bottom: 10px;
+  }
+  ol{
+    display: flex;
+  }
+  &__list {
+    background-color: $card;
+    border-radius: 20px;
+    padding: 25px 84px 25px 0;
+    margin: 20px 20px 20px 12px;
+    font-size: $text-size;
+    font-weight: bold;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.2);
+    list-style-type: none;
+
+    &--number {
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      text-align: center;
+      line-height: 25px;
+      position: relative;
+      right: 14px;
+      border-radius: 50%;
+      border: 1px solid;
+      background-color: $filter;
+      color: white;
+      font-weight: normal;
     }
   }
 
+  .fa-solid {
+    padding-right: 20px;
+    font-size: 20px;
+    color: #7e7e7e;
+  }
+  .fa-store {
+    color: $filter;
+  }
+}
+.restaurant {
+  background-color: $card;
+  padding: 30px 180px 0;
 
+  &__card {
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 
+  h1 {
+    font-size: $title-size;
+  }
+  a{
+    display: flex;
+  }
+  .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 251px;
+    width: 490px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+  }
+  img {
+    object-fit: cover;
+    object-position: center -50px;
+    width: 100%;
+    height: 175px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  span {
+    position: absolute;
+    left: 395px;
+    top: 10px;
+    display: flex;
+    width: 80px;
+    height: 29px;
+    justify-content: center;
+    align-items: center;
+    color: $green-font;
+    font-size: $new-size;
+    border: 1px solid $tick;
+    border-radius: 2px;
+    background-color: $tick;
+  }
+  .card__content {
+    display: flex;
+    justify-content: space-between;
+  }
+  .card__text {
+    margin: 15px 18px;
+    &--title {
+      font-size: $second-title-size;
+      margin-bottom: 5px;
+    }
+    .card__subtitle {
+      font-size: 17px;
+      font-weight: 300;
+    }
+  }
+  .fa-regular {
+    font-size: 25px;
+    margin: 20px;
+  }
 
+  .fa-regular:active {
+    position: absolute;
+    color: $button-gradient;
+  }
+}
+.footer__container {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 186px;
+  background-color: $footer;
+  color: white;
+  padding: 25px;
+  ul{
+    display: flex;
+    padding: 30px 48px;
+  }
+  .mention{
+    margin-left: 45px;
+  }
+  .mention, 
+  .contact{
+    font-weight: 400;
+  }
+  &--list {
+    margin: 7px 0;
+    list-style-type: none;
+    margin-left: 13px;
+    font-weight: 500;
+    .fa-solid {
+      font-size: 13px;
+      margin-right: 2px;
+    }
+  }
+  h3 {
+    font-family: $logo;
+    font-size: $second-title-size;
+    padding: 30px 43px;
+  }
+}
 
+@media (max-width: 768px) {
+  .main-container {
+    width: 100%;
+    max-width: 767.98px;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  header {
+    h1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: $logo;
+      font-size: $logo-size;
+      height: 63px;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 1;
+    }
+
+    nav {
+      background-color: $second-gray;
+      display: flex;
+      justify-content: center;
+      height: 50px;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.3);
+      position: relative;
+    }
+
+    .position {
+      display: flex;
+      align-items: center;
+      font-size: $text-size;
+      color: black;
+    }
+
+    input {
+      border: none;
+      background-color: $second-gray;
+      font-size: $text-size;
+      box-sizing: border-box;
+      padding-left: 20px;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  .explorer {
+    background-color: $card;
+    padding-top: 40px;
+    text-align: center;
+
+    h1 {
+      display: flex;
+      justify-content: center;
+      font-size: $title-size;
+      font-weight: bold;
+      padding: 0 50px;
+    }
+    &__text {
+      display: flex;
+      justify-content: center;
+      font-size: $second-title-size;
+      font-weight: lighter;
+      padding: 10px 0 35px;
+    }
+    button {
+      font-size: $text-size;
+      border-radius: 25px;
+      border: none;
+      background: $button-gradient;
+      color: white;
+      padding: 15px 23px;
+      margin-bottom: 55px;
+    }
+  }
+  .operation {
+    height: 375px;
+    padding: 45px 0 20px 20px;
+
+    h1 {
+      padding-bottom: 10px;
+    }
+    ol{
+      display: block;
+    }
+
+    &__list {
+      background-color: $card;
+      border-radius: 20px;
+      padding: 25px 0;
+      margin: 20px 20px 20px 12px;
+      font-size: $text-size;
+      font-weight: bold;
+      box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.2);
+      list-style-type: none;
+
+      &--number {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        line-height: 25px;
+        position: relative;
+        right: 14px;
+        border-radius: 50%;
+        border: 1px solid;
+        background-color: $filter;
+        color: white;
+        font-weight: normal;
+      }
+    }
+
+    .fa-solid {
+      padding-right: 20px;
+      font-size: 20px;
+      color: #7e7e7e;
+    }
+    .fa-store {
+      color: $filter;
+    }
+  }
+  .restaurant {
+    background-color: $card;
+    padding: 20px 20px 47px;
+
+    &__card {
+      padding-top: 20px;
+      display: block;
+    }
+
+    h1 {
+      font-size: $title-size;
+      padding-top: 33px;
+    }
+    .card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      height: 251px;
+      border-radius: 15px;
+      margin-bottom: 18px;
+    }
+    img {
+      object-fit: cover;
+      object-position: center -50px;
+      width: 100%;
+      height: 175px;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+    .card__special {
+      position: relative;
+      img {
+        object-position: center -150px;
+      }
+    }
+    span {
+      position: absolute;
+      left: 240px;
+      top: 10px;
+      display: flex;
+      width: 80px;
+      height: 29px;
+      justify-content: center;
+      align-items: center;
+      color: $green-font;
+      font-size: $new-size;
+      border: 1px solid $tick;
+      border-radius: 2px;
+      background-color: $tick;
+    }
+    .card__content {
+      display: flex;
+      justify-content: space-between;
+    }
+    .card__text {
+      margin: 15px 10px;
+      &--title {
+        font-size: $second-title-size;
+        margin-bottom: 5px;
+      }
+      .card__subtitle {
+        font-size: 17px;
+        font-weight: 300;
+      }
+    }
+    .fa-regular {
+      font-size: 25px;
+      margin: 20px;
+    }
+
+    .fa-regular:active {
+      position: absolute;
+      color: $button-gradient;
+    }
+  }
+  .footer__container {
+    display: block;
+    height: 186px;
+    background-color: $footer;
+    color: white;
+    padding: 25px;
+    ul{
+      display: block;
+      padding: 0;
+    }
+    .mention{
+      margin: 0;
+    }
+    &--list {
+      margin: 7px 0;
+      list-style-type: none;
+      .fa-solid {
+        font-size: 13px;
+        margin-right: 2px;
+      }
+    }
+    h3 {
+      font-family: $logo;
+      font-size: $second-title-size;
+      margin-bottom: 13px;
+      padding: 0;
+    }
+  }
 }
