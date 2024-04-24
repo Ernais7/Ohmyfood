@@ -10,7 +10,10 @@ $logo-size: 30px;
 $title-size: 24px;
 $second-title-size: 18px;
 $text-size: 16px;
+$commentaty-size: 15px;
 $new-size: 14px;
+$weight-light: 300;
+$weight-little-bold: 500;
 
 * {
   font-family: "Roboto", sans-serif;
@@ -97,6 +100,13 @@ a {
     color: white;
     padding: 15px 23px;
     margin-bottom: 55px;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.3);
+    opacity: 1;
+    transition: opacity 600ms;
+  }
+  &__button:hover {
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.4);
+    opacity: 0.7;
   }
 }
 .operation {
@@ -180,6 +190,7 @@ a {
       border: 1px solid $tick;
       border-radius: 2px;
       background-color: $tick;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
     }
     &__special {
       position: relative;
@@ -199,33 +210,44 @@ a {
       font-size: 17px;
       font-weight: 300;
     }
-    &__favorite{
-      background-color: red;
-    }
   }
+
   .link {
     margin-bottom: 18px;
   }
   .food {
     object-fit: cover;
+    object-position: 50% 60%;
     width: 100%;
     height: 175px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
   }
-
-  .fa-regular {
-    font-size: 25px;
+  .card__favorite {
     margin: 20px;
   }
 
-  .fa-regular:active {
-    position: absolute;
+  .heart-label:hover {
+    cursor: pointer;
+  }
+
+  .heart-checkbox {
+    display: none;
+  }
+
+  .heart-color {
+    display: none;
+  }
+
+  .heart-checkbox:checked + .heart-label .heart-color {
+    display: inline-block;
+  }
+  .heart-checkbox:checked + .heart-label .heart {
+    display: none;
   }
 }
 .foot {
   display: block;
-  height: 186px;
   background-color: $footer;
   color: white;
   padding: 25px;
@@ -251,8 +273,142 @@ a {
     padding: 0;
   }
 }
+/*page restaurants*/
+.header__restaurant {
+  display: flex;
+  align-items: center;
+  .header__back {
+    font-size: 20px;
+    padding: 0 65px 0 23px;
+  }
+  .header__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $logo;
+    font-size: $logo-size;
+    height: 63px;
+  }
+}
+.image-restaurant {
+  width: 100%;
+  height: 275px;
+  object-fit: cover;
+}
+.main-card {
+  position: relative;
+  margin-top: -58px;
+  padding: 30px 13px;
+  background-color: $card;
+  border-radius: 40px 40px 0 0;
+  .card__head {
+    display: flex;
+    padding-left: 4px;
+    .card__favorite {
+      margin: 10px 10px 35px 35px;
+    }
+    .heart-label:hover {
+      cursor: pointer;
+    }
+    .heart-checkbox {
+      display: none;
+    }
+    .heart-color {
+      display: none;
+    }
+    .heart-checkbox:checked + .heart-label .heart-color {
+      display: inline-block;
+    }
+    .heart-checkbox:checked + .heart-label .heart {
+      display: none;
+    }
+    .card__title {
+      font-family: $logo;
+      font-size: 28px;
+      font-weight: 400;
+    }
+  }
+  .meals {
+    padding-bottom: 25px;
+    &__title {
+      font-weight: $weight-light;
+      font-size: $text-size;
+    }
+    &__head {
+      padding-bottom: 10px;
+      .underline {
+        border: 1.5px solid;
+        width: 36px;
+        color: $tick;
+        margin-top: 5px;
+      }
+    }
+    .dish {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      background-color: white;
+      border-radius: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+      &__title {
+        font-size: $second-title-size;
+        font-weight: $weight-little-bold;
+        margin-bottom: 5px;
+      }
+      &__commentary {
+        font-size: $commentaty-size;
+        font-weight: $weight-light;
+      }
+      &__title,
+      &__commentary {
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      &__check{
+        display: flex;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+        background-color: $tick;
+        border-radius: 0 15px 15px 0;
+        height: 67.5px;
+        transition: width 300ms ease-in-out;
+        width: 0;
+      }
+      &__head {
+        width: 100%;
+        padding: 12px 5px 12px 15px;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      &__price {
+        font-weight: 700;
+        margin: 0 10px;
+        padding-bottom: 12px;
+      }
+      .fa-check {
+        border-radius: 25px;
+        background-color: white;
+        color: $tick;
+        padding: 2px;
+        font-size: 15px;
+      }   
+    }
+    .dish:hover .dish__check {
+      width: 79px;
+    }
+  }
+  .order {
+    text-align: center;
+    &--meals {
+      padding: 15px 50px;
+      margin-bottom: 10px;
+    }
+  }
+}
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .head {
     &__logo {
       font-size: 35px;
@@ -352,5 +508,24 @@ a {
       padding: 25px 43px;
       margin-bottom: 0;
     }
+  }
+  /*page restaurants*/
+  .header__restaurant {
+    padding-bottom: 30px;
+  }
+  .image-restaurant {
+    height: 383px;
+  }
+  .main-card {
+    margin: -40px 190px;
+    .card__head {
+      justify-content: center;
+    }
+    .meals {
+      margin: 30px 200px;
+    }
+  }
+  .foot {
+    position: relative;
   }
 }
