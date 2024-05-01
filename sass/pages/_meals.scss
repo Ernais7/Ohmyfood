@@ -1,0 +1,105 @@
+//--page-restaurant--
+.image-restaurant {
+  width: 100%;
+  height: 275px;
+  object-fit: cover;
+}
+.main-card {
+  position: relative;
+  margin-top: -58px;
+  padding: 30px 13px;
+  background-color: $card;
+  border-radius: 40px 40px 0 0;
+  .card__head {
+    display: flex;
+    padding-left: 4px;
+    margin-bottom: 30px;
+
+    .card__title {
+      font-family: $logo;
+      font-size: 28px;
+      font-weight: 400;
+    }
+  }
+  .meals {
+    padding-bottom: 25px;
+    &__title {
+      font-weight: $weight-light;
+      font-size: $text-size;
+    }
+    &__head {
+      padding-bottom: 10px;
+      .underline {
+        border: 1.5px solid;
+        width: 36px;
+        color: $tick;
+        margin-top: 5px;
+      }
+    }
+    .dish {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      overflow: hidden;
+      background-color: white;
+      border-radius: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+
+      &__title {
+        font-size: $second-title-size;
+        font-weight: $weight-little-bold;
+        margin-bottom: 5px;
+      }
+      &__commentary {
+        font-size: $commentaty-size;
+        font-weight: $weight-light;
+      }
+      &__title,
+      &__commentary {
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      &__head {
+        width: 100%;
+        padding: 12px 5px 12px 15px;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      &__price {
+        font-weight: 700;
+        margin: 0 10px;
+        padding-bottom: 12px;
+      }
+    }
+  }
+  .order {
+    text-align: center;
+    &--meals {
+      padding: 15px 50px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .image-restaurant {
+    height: 383px;
+    object-position: 100% 60%;
+  }
+  .main-card {
+    margin: -40px 190px;
+    .card__head {
+      justify-content: center;
+      margin-top: 18px;
+    }
+
+    .meals {
+      margin: 10px 200px -10px;
+    }
+    .order {
+      margin: 10px 0 45px;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.main-container {
+  position: relative;
+  z-index: 1;
+}
+
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  font-size: 80px;
+  color: $filter;
+  background-color: white;
+  animation: slide 2.5s forwards;
+}
+
+.loader i {
+  position: absolute;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  animation: rotation 2s forwards;
+}
+
+@keyframes slide {
+  0%,
+  80% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
+
+  30% {
+    transform: rotate(360deg) scale(0.4);
+  }
+
+  60% {
+    transform: rotate(720deg) scale(1.3);
+  }
+
+  100% {
+    transform: rotate(1080deg);
+  }
+}

@@ -1,0 +1,32 @@
+.explorer {
+  background-color: $card;
+  padding-top: 40px;
+  text-align: center;
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    font-size: $title-size;
+    font-weight: bold;
+    padding: 0 50px;
+  }
+  &__text {
+    display: flex;
+    justify-content: center;
+    font-size: $second-title-size;
+    font-weight: lighter;
+    padding: 10px 0 35px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .explorer {
+    padding-top: 30px;
+    &__title {
+      font-size: 40px;
+    }
+    &__text {
+      padding: 30px 0 35px;
+    }
+  }
+}

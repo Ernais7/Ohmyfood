@@ -1,0 +1,52 @@
+.restaurant {
+  background-color: $card;
+  padding: 20px 20px 47px;
+
+  &__card {
+    padding-top: 20px;
+    display: block;
+  }
+
+  &__title {
+    font-size: $title-size;
+    padding-top: 33px;
+  }
+}
+
+.link {
+  margin-bottom: 18px;
+}
+.food {
+  object-fit: cover;
+  object-position: 50% 60%;
+  width: 100%;
+  height: 175px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+@media (min-width: 1440px) {
+  .restaurant {
+    padding: 30px 180px 0;
+
+    &__title {
+      padding: 0;
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+
+    &__card {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding-top: 30px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px 100px;
+    }
+    .link {
+      display: flex;
+      height: 251px;
+      margin-bottom: 40px;
+    }
+  }
+}

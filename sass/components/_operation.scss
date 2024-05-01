@@ -1,0 +1,26 @@
+.operation {
+  height: 375px;
+  padding: 45px 0 20px 20px;
+  background-color: white;
+
+  &__title {
+    padding-bottom: 10px;
+  }
+  .block-list {
+    display: block;
+  }
+}
+
+@media (min-width: 1440px) {
+  .operation {
+    height: 180px;
+    padding: 45px 180px 0;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    .block-list {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

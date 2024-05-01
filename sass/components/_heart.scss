@@ -1,0 +1,33 @@
+.restaurant {
+  .card__favorite {
+    margin: 17px 48px;
+    font-size: 20px;
+  }
+
+  .fa-heart {
+    position: absolute;
+    cursor: pointer;
+    font-size: 1.2em;
+  }
+  .my-heart-full {
+    opacity: 0;
+    background-image: linear-gradient(#9356dc, #ff79da);
+    transition: opacity 1s ease-in-out;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .my-heart-full:hover {
+    opacity: 1;
+    background-image: linear-gradient(#9356dc, #ff79da);
+  }
+}
+
+@media (min-width: 1440px) {
+  //--fav page--
+  .main-card {
+    .card__favorite {
+      margin: 7px 35px;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.restaurant {
+  .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 251px;
+    border-radius: 15px;
+    margin-bottom: 18px;
+
+    //--badge-new--
+    &__new {
+      position: absolute;
+      margin-right: 10px;
+      right: 0;
+      top: 5%;
+      display: flex;
+      width: 80px;
+      height: 29px;
+      justify-content: center;
+      align-items: center;
+      color: $green-font;
+      font-size: $new-size;
+      border: 1px solid $tick;
+      border-radius: 2px;
+      background-color: $tick;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    }
+    &__special {
+      position: relative;
+    }
+    &__content {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__text {
+      margin: 15px 10px;
+      &--title {
+        font-size: $second-title-size;
+        margin-bottom: 5px;
+      }
+    }
+    &__subtitle {
+      font-size: 17px;
+      font-weight: 300;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .card {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .card__text {
+    margin: 15px 18px;
+  }
+}
