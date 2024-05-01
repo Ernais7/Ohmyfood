@@ -112,6 +112,8 @@ a {
 }
 .header__restaurant .header__logo {
   display: flex;
+  flex-grow: 1;
+  margin-right: 105px;
   justify-content: center;
   align-items: center;
   font-family: "Shrikhand", sans-serif;
@@ -324,23 +326,28 @@ a {
     padding: 30px 0 35px;
   }
 }
-.restaurant .card__favorite {
+.card__favorite {
   margin: 17px 48px;
   font-size: 20px;
+  display: flex;
+  align-items: center;
 }
-.restaurant .fa-heart {
+
+.fa-heart {
   position: absolute;
   cursor: pointer;
   font-size: 1.2em;
 }
-.restaurant .my-heart-full {
+
+.my-heart-full {
   opacity: 0;
   background-image: linear-gradient(#9356dc, #ff79da);
   transition: opacity 1s ease-in-out;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.restaurant .my-heart-full:hover {
+
+.my-heart-full:hover {
   opacity: 1;
   background-image: linear-gradient(#9356dc, #ff79da);
 }
@@ -526,6 +533,7 @@ a {
 }
 .main-card .card__head {
   display: flex;
+  justify-content: center;
   padding-left: 4px;
   margin-bottom: 30px;
 }

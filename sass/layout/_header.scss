@@ -49,6 +49,8 @@
     }
     .header__logo {
       display: flex;
+      flex-grow: 1;
+      margin-right: 105px;
       justify-content: center;
       align-items: center;
       font-family: $logo;
