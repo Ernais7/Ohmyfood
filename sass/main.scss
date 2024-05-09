@@ -4,16 +4,16 @@
 
 @import 'layout/footer';
 @import 'layout/header';
+@import 'layout/explorer';
+@import 'layout/operation';
+@import 'layout/restaurant';
 
 @import 'components/anim-check';
 @import 'components/anim-pages';
 @import 'components/button';
 @import 'components/card-new';
-@import 'components/explorer';
 @import 'components/heart';
 @import 'components/loader';
-@import 'components/operation';
-@import 'components/restaurant';
 @import 'components/step';
 
 @import 'pages/meals';

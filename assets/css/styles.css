@@ -151,6 +151,110 @@ a {
     padding-left: 23px;
   }
 }
+.explorer {
+  background-color: #f6f6f6;
+  padding-top: 40px;
+  text-align: center;
+}
+.explorer__title {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 0 50px;
+}
+.explorer__text {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: lighter;
+  padding: 10px 0 35px;
+}
+
+@media (min-width: 1440px) {
+  .explorer {
+    padding-top: 30px;
+  }
+  .explorer__title {
+    font-size: 40px;
+  }
+  .explorer__text {
+    padding: 30px 0 35px;
+  }
+}
+.operation {
+  height: 375px;
+  padding: 45px 0 20px 20px;
+  background-color: white;
+}
+.operation__title {
+  padding-bottom: 10px;
+}
+.operation .block-list {
+  display: block;
+}
+
+@media (min-width: 1440px) {
+  .operation {
+    height: 180px;
+    padding: 45px 180px 0;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .operation .block-list {
+    display: flex;
+    justify-content: center;
+  }
+}
+.restaurant {
+  background-color: #f6f6f6;
+  padding: 20px 20px 47px;
+}
+.restaurant__card {
+  padding-top: 20px;
+  display: block;
+}
+.restaurant__title {
+  font-size: 24px;
+  padding-top: 33px;
+}
+
+.link {
+  margin-bottom: 18px;
+}
+
+.food {
+  object-fit: cover;
+  object-position: 50% 60%;
+  width: 100%;
+  height: 175px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+@media (min-width: 1440px) {
+  .restaurant {
+    padding: 30px 180px 0;
+  }
+  .restaurant__title {
+    padding: 0;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .restaurant__card {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 100px;
+  }
+  .restaurant .link {
+    display: flex;
+    height: 251px;
+    margin-bottom: 40px;
+  }
+}
 .dish__check {
   display: flex;
   overflow: hidden;
@@ -295,37 +399,6 @@ a {
     margin: 15px 18px;
   }
 }
-.explorer {
-  background-color: #f6f6f6;
-  padding-top: 40px;
-  text-align: center;
-}
-.explorer__title {
-  display: flex;
-  justify-content: center;
-  font-size: 24px;
-  font-weight: bold;
-  padding: 0 50px;
-}
-.explorer__text {
-  display: flex;
-  justify-content: center;
-  font-size: 18px;
-  font-weight: lighter;
-  padding: 10px 0 35px;
-}
-
-@media (min-width: 1440px) {
-  .explorer {
-    padding-top: 30px;
-  }
-  .explorer__title {
-    font-size: 40px;
-  }
-  .explorer__text {
-    padding: 30px 0 35px;
-  }
-}
 .card__favorite {
   margin: 17px 48px;
   font-size: 20px;
@@ -344,7 +417,7 @@ a {
   background-image: linear-gradient(#9356dc, #ff79da);
   transition: opacity 1s ease-in-out;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .my-heart-full:hover {
@@ -403,79 +476,6 @@ a {
   }
   100% {
     transform: rotate(1080deg);
-  }
-}
-.operation {
-  height: 375px;
-  padding: 45px 0 20px 20px;
-  background-color: white;
-}
-.operation__title {
-  padding-bottom: 10px;
-}
-.operation .block-list {
-  display: block;
-}
-
-@media (min-width: 1440px) {
-  .operation {
-    height: 180px;
-    padding: 45px 180px 0;
-    max-width: 1440px;
-    margin: 0 auto;
-  }
-  .operation .block-list {
-    display: flex;
-    justify-content: center;
-  }
-}
-.restaurant {
-  background-color: #f6f6f6;
-  padding: 20px 20px 47px;
-}
-.restaurant__card {
-  padding-top: 20px;
-  display: block;
-}
-.restaurant__title {
-  font-size: 24px;
-  padding-top: 33px;
-}
-
-.link {
-  margin-bottom: 18px;
-}
-
-.food {
-  object-fit: cover;
-  object-position: 50% 60%;
-  width: 100%;
-  height: 175px;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-}
-
-@media (min-width: 1440px) {
-  .restaurant {
-    padding: 30px 180px 0;
-  }
-  .restaurant__title {
-    padding: 0;
-    max-width: 1440px;
-    margin: 0 auto;
-  }
-  .restaurant__card {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding-top: 30px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px 100px;
-  }
-  .restaurant .link {
-    display: flex;
-    height: 251px;
-    margin-bottom: 40px;
   }
 }
 .operation__list {
